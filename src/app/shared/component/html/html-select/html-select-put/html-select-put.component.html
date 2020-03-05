@@ -1,0 +1,17 @@
+<div>
+  <label>{{ label }}</label>
+  <label *ngIf="required" class="text-danger">*</label>
+  <select
+    [name]="name"
+    [attr.relatedTo]="relatedTo"
+    class="form-control"
+    (change)="changeSelected($event.target.value)"
+  >
+    <option
+      *ngFor="let opt of options$ | async"
+      [value]="opt.id"
+      [selected]="opt.id === selected"
+      >{{ opt.name }}</option
+    >
+  </select>
+</div>

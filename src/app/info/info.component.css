@@ -1,0 +1,24 @@
+article{
+    padding: 10px;
+  
+}
+
+ul{
+    display: block;
+}
+ul li{
+    display: inline;
+    float: left;
+    margin: 30px 120px;
+}
+
+ul li div{
+    width: 350px;
+
+}
+
+h3{
+    font-size: 1.50rem;
+    text-align: center;
+    padding-top: 10px;;
+}

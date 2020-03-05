@@ -1,0 +1,22 @@
+<label>{{ label }}</label>
+<label *ngIf="required" class="text-danger">*</label>
+
+<div class="row">
+  <div *ngFor="let opt of options$ | async" class="block">
+    <label class="cust-check-bx">
+      <input
+        type="radio"
+        [value]="opt.id"
+        [name]="name"
+        [attr.relatedTo]="relatedTo"
+        [checked]="
+        opt.id == selected ? true : false
+      "
+      (change)="changeSelected($event.target.value)"
+      />
+      {{ opt.name }}
+      <span class="checkmark"></span>
+    </label>
+  </div>
+ </div>
+        

@@ -1,0 +1,11 @@
+<mat-drawer-container class="mat-side-nav-container">
+  <mat-drawer mode="over" opened="false" #sidenav role="navigation" mat-elevation-z10>
+<app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+<app-header  (sidenavToggle)="sidenav.toggle()"></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,13 @@
+<label id="example-radio-group-label">{{ placeholder }}</label>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+>
+  <mat-radio-button
+    class="example-radio-button"
+    *ngFor="let opt of options$ | async"
+    [value]="opt.id"
+  >
+    {{ opt.name }}
+  </mat-radio-button>
+</mat-radio-group>

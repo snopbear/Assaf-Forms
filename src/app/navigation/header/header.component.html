@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <div (click)="onToggleSideNav()" >
+   
+
+      <mat-icon class="pointer">menu</mat-icon>
+  </div>
+  <div><a [routerLink]="['/']"></a></div>
+  <!-- To Make them as a unit-->
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <!-- <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li ><a [routerLink]="['/signup']"> Signup</a></li>
+      <li><a [routerLink]="['/login']">Login </a></li>
+      <li ><a [routerLink]="['/training']"> Training</a></li>
+    </ul> -->
+  </div>
+</mat-toolbar>

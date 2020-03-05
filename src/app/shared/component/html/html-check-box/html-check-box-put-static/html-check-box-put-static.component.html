@@ -1,0 +1,20 @@
+<label>{{ label }}</label>
+<label *ngIf="required" class="text-danger">*</label>
+<div class="row">
+  <div *ngFor="let v of itemsOf" class="inline-form-group">
+    <label class="cust-check-bx">
+      <input
+        type="checkbox"
+        [value]="v.value"
+        [name]="v.name"
+        [checked]="v.selected"
+        [attr.relatedTo]="relatedTo"
+        (change)="onChange(v,itemsOf)"
+      />
+      {{ v.label }}
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+
+<!--       (click)="toggleValue(v)" [checked]="v.id == items[item.name]"  [relatedTo]="item.relatedTo" -->

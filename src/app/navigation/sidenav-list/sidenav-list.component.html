@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <i class="material-icons">
+    view_quilt
+  </i>
+  Forms Builder
+</mat-toolbar>
+<mat-nav-list>
+  <a mat-list-item routerLink="/" (click)="onClose()">
+    <mat-icon>account_balance</mat-icon>
+    <span class="nav-caption" >Home</span>
+  </a>
+
+  <a mat-list-item routerLink="/view" (click)="onClose()">
+    <mat-icon>visibility</mat-icon>
+    <span class="nav-caption" >View</span>
+  </a>
+
+  <a mat-list-item  [routerLink]="['post',1]" (click)="onClose()">
+    <mat-icon>person_add</mat-icon>
+    <span class="nav-caption">CRUD</span>
+  </a>
+
+  <a mat-list-item routerLink="/info" (click)="onClose()">
+    <mat-icon>info</mat-icon>
+    <span class="nav-caption">Info</span>
+  </a>
+</mat-nav-list>
